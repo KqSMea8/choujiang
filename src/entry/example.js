@@ -1,6 +1,5 @@
 /**
  * @file main.js
- * @author aosyang<yangyanzhao@baidu.com>
  */
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css';
