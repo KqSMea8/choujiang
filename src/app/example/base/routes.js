@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 
 const routes = [
     {
-        path: '/',
+        path: '/two',
         component: Main,
         meta: {
             page: 'Main',
@@ -18,7 +18,7 @@ const routes = [
         }
     },
     {
-        path: '/two',
+        path: '/',
         component: Two,
         meta: {
             page: 'Secret',

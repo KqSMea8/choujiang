@@ -1,7 +1,10 @@
 <template>
     <div class="container">
-        <h1>我是第二个页面</h1>
-        <div class="bottom" @click="click">点我到第一个页面</div>
+        <video :class="videoshow == 1?'show' : 'hide'" preload x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait">
+            <source src="./static/videoplayback.mp4" type="video/mp4">
+        </video>
+        <img class="lingdang animated infinite swing" v-if="lingshow" src="./static/lingdang.jpg" @click="jump" alt="">
+        <button v-if="btnshow" class="start" @click="click">开始</button>
     </div>
 </template>
 <script>
@@ -11,24 +14,57 @@
         },
 
         methods: {
-            click: function() {
-                this.$router.push('/');
+            click() {
+                this.videoshow = 1;
+                let video = document.querySelector('video');
+                video.load();
+                var playPromise = video.play();
+                this.btnshow = false;
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                      // 这个时候可以安全的暂停
+                      // video.pause();
+                      // this.videoshow = 0;
+                    })
+                    .catch(error => {
+
+                    });
+                }
+                video.addEventListener("ended",() => {
+                     this.videoshow = 0;
+                     this.lingshow = true;
+                });
+                // this.$router.push('/');
+            },
+            jump() {
+                this.$router.push('/two');
             }
         },
 
         data(){
             return {
-                total: 0,
-                title: '引力简介',
-                content: '引力是度宇宙中目前探索到的第一种力量形式。' +
-                '拥有星球的居民都拥有一定引力值，并且可通过引力凝聚出元素；' +
-                '引力越高，获得的元素越多。宇宙居民可以通过完成引力任务提升引力，' +
-                '未来将会支持更多的引力提升方式。',
-                noMoreData: false,
-                inAnd: false
+                videoshow: 0,
+                lingshow: false,
+                btnshow: true
             };
         },
+        mounted() {
+            let video = document.querySelector('video');
+            var playPromise = video.play();
 
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                  // 这个时候可以安全的暂停
+                  video.pause();
+                })
+                .catch(error => {
+
+                });
+            }
+            document.addEventListener("WeixinJSBridgeReady", function() {
+                document.getElementById('video').play();
+            }, false);
+        },
         created() {
         }
     };

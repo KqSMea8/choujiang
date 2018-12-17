@@ -137,36 +137,40 @@ body {
 }
 .mask {
 	text-align: center;
-	color: #fff;
-	font-size: 40px;
+	color: #000;
+	font-size: 30px;
     line-height: 60px;
     font-weight: bold;
 	position: absolute;
 	width: 100%;
-	top: 70px;
-	height: 60px;
-	background: #000;
+	top: 60px;
+	height: 50px;
+	background: transparent;
 	/*z-index: 1;*/
 	/*box-shadow: 0 0 0 80px rgba(0, 0, 0, 0.27);*/
 }
 .mask-top1 {
 	z-index: 2;
+	display: none;
 }
 .mask-top {
+	display: none;
 	position: absolute;
 	width: 100%;
 	top: 0px;
-	height: 70px;
+	height: 60px;
 	background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 1))
 }
 .mask-bottom1 {
 	z-index: 2;
+	display: none;
 }
 .mask-bottom {
+	display: none;
 	position: absolute;
 	width: 100%;
-	top: 130px;
-	height: 70px;
+	top: 110px;
+	height: 60px;
 	background: -webkit-linear-gradient(rgba(0, 0, 0, 1), transparent)
 }
 /* latin-ext */
@@ -218,8 +222,9 @@ body{
   height:700px;
 }
 .cat{
+	display: none;
   position:absolute;
-  top:20%;
+  top:23%;
   left:50%;
   transform:translate(-50%,-50%)scale(0.5);
   height:57%;
@@ -487,22 +492,23 @@ body{
   border:6px solid black;
 }
 .tail{
-  position:absolute;
-  top:25%;
-  left:100%;
-  transform:translate(-50%,-50%);
-  width:250px;
-  animation:movetail ease-in-out 3s infinite;
-  animation-play-state: paused;
+	display: none;
+    position:absolute;
+    top:8%;
+    left:100%;
+    transform:translate(-50%,-50%);
+    width:250px;
+    animation:movetail ease-in-out 3s infinite;
+    animation-play-state: paused;
 }
 .form{
   position:absolute;
   top:59%;
   left:50%;
   transform:translate(-50%,-50%);
-  width:100%;
-  height:52%;
-  background:#636e72;
+  width:300px;
+  height:300px;
+  background:#fff;
   border:4px solid black;
   border-radius:24px;
 }
@@ -540,18 +546,18 @@ body{
   background:#44bd32;
   border-radius:24px;
   border:1px solid #44bd32;
-  box-shadow:0px 0px 12px #44bd32;
   font-size:26px;
   font-weight:700;
   text-shadow:0px 0px 12px #4cd137;
   outline: none;
+  border: 3px solid #000;
 }
 .label{
   position:absolute;
   top:11%;
   left:50%;
   transform:translate(-50%,-50%);
-  font-size:24px;
+  font-size:21px;
   font-weight:700;
   white-space:nowrap;
 }

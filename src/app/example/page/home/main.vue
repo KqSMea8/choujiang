@@ -14,7 +14,7 @@
             </svg>
         </div>
         <div class="form">
-          <div class="label"> MW&LGH选出的 <i class="fas fa-fish"></i> 小锦鲤</div>
+          <div class="label">孟薇和她的小伙伴们的抽奖</div>
             <div class="list" id="data">
                 <div class="xianwrap">
                     <div class="gunzhou">
