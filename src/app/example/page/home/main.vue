@@ -161,7 +161,7 @@
                         return;
                     }
                     axios
-                      .get('http://localhost:8000/choujiangvue/api')
+                      .get('http://cp01-kga-gh-rd01.epc.baidu.com:8099/choujiangvue/api')
                       .then(response => {
                         clearInterval(this.t);
                         this.name = this.list[response.data.data.salt];

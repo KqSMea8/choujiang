@@ -1,7 +1,7 @@
 module.exports = {
 	dirname: __dirname,
 	appname: 'choujiangvue',
-	localStaticDomain: '//localhost:8000',
+	localStaticDomain: '//cp01-kga-gh-rd01.epc.baidu.com:8099',
 	publicStaticDomain: '//gh.bdstatic.com',
 	/**
      * 分离模式
