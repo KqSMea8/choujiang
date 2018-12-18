@@ -145,16 +145,32 @@
             start() {
                 if (this.btnTxt == '停止') {
                     this.btnTxt = '开始';
-                    
+                    // if (this.num>2) {
+                    //     clearInterval(this.t);
+                    //     this.name = '真的别点了';
+                    //     return;
+                    // }
+                    // if (this.num>2) {
+                    //     clearInterval(this.t);
+                    //     this.name = '真的';
+                    //     return;
+                    // }
+                    if (this.num>1) {
+                        clearInterval(this.t);
+                        this.name = '别点了，我就准备了这个';
+                        return;
+                    }
                     axios
                       .get('http://localhost:8000/choujiangvue/api')
                       .then(response => {
                         clearInterval(this.t);
                         this.name = this.list[response.data.data.salt];
+                        this.num++;
                         // console.log(response.data.data.salt);
                       });
                     
                 } else if (this.btnTxt == '开始') {
+                    console.log(1)
                     this.btnTxt = '停止';
                     let i = 0;
                     this.t = setInterval(() => {
@@ -164,16 +180,17 @@
                             return;
                         }
                         i++;
-                    }, 10);
+                    }, 100);
                 }
             }
         },
         mounted() {
-            this.name = this.list[this.salt];
+            this.name = '准备抽奖';
         },
         data(){
             return {
-                name: '123',
+                num: 0,
+                name: '准备抽奖',
                 btnTxt: '开始'
             };
         },

@@ -10,8 +10,8 @@ body {
 	background: #fff;
 }
 .start {
-	width: 100px;
-	height: 50px;
+	width: 150px;
+	height: 60px;
 	border-radius: 13px;
 	background: red;
 	color: #fff;
@@ -19,8 +19,9 @@ body {
 	position: absolute;
     bottom: 100px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -75px;
     outline: none;
+    border: 3px solid #fff;
 }
 .lingdang {
 	position: absolute;
@@ -44,4 +45,134 @@ video {
 }
 .hide {
 	opacity:0;
+}
+.box {
+  margin: 0 auto;
+  background: #E55070;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.cookies {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+}
+#cookies {
+  width: 300px;
+}
+
+.bea {
+  position: relative;
+  top: 400px;
+  left: -300px;
+  transform: rotate(100deg);
+  transform-origin: 150px 0;
+  animation: animate 5s infinite;
+}
+
+.bea-arm {
+  background: #ffaae6;
+  border: 3px solid #dd82c7;
+  border-radius: 15px;
+  width: 60px;
+  height: 200px;
+}
+
+.bea:before {
+  content: "";
+  display: block;
+  background: #e5af83;
+  border: 2px solid #a17b5c;
+  position: absolute;
+  border-radius: 15px;
+  top: -55px;
+  left: 15px;
+  width: 40px;
+  height: 60px;
+  z-index: -1;
+}
+
+.bea:after {
+  content: "";
+  display: block;
+  background: #d6a47a;
+  border: 2px solid #a17b5c;
+  position: absolute;
+  border-radius: 10px;
+  top: -27px;
+  left: 5px;
+  width: 15px;
+  height: 30px;
+  transform: rotate(-30deg);
+  z-index: -2;
+}
+
+.santa {
+  position: relative;
+  top: 390px;
+  left: 150px;
+  transform: rotate(350deg);
+  transform-origin: 200px 0;
+  animation: animate2 5s 3.8s infinite;
+}
+
+.santa-arm {
+  background: #dd394e;
+  border: 3px solid #b22e3f;
+  border-radius: 15px;
+  width: 100px;
+  height: 200px;
+}
+
+.santa-arm:before {
+  content: "";
+  display: block;
+  background: white;
+  border: 3px solid #c3c3d8;
+  border-radius: 15px;
+  width: 105px;
+  height: 50px;
+  position: absolute;
+  top: -30px;
+  left: -2px;
+}
+
+.santa-arm:after {
+  content: "";
+  display: block;
+  background: white;
+  border: 3px solid #c3c3d8;
+  border-radius: 50px;
+  width: 80px;
+  height: 100px;
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  z-index: -1;
+}
+
+@keyframes animate {
+  0% {
+    left: -300px;
+  }
+  80% {
+    left: -50px;
+  }
+  85% {
+    left: -300px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: 390px;
+  }
+  5% {
+    top: 100px;
+  }
+  15% {
+    top: 390px;
+  }
 }

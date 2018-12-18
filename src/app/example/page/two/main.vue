@@ -1,5 +1,27 @@
 <template>
     <div class="container">
+          <div class="box" :class="videoshow == 1?'hide' : 'show'">
+            <div class="cookies">
+              <img id="cookies" src="./static/home.png" alt="cookies">
+            </div>
+            <div class="bea">
+              <div class="arm bea-arm"></div>
+              <div class="hand bea-hand"></div>
+            </div>
+            <div class="santa">
+              <div class="arm santa-arm"></div>
+              <div class="hand santa-hand"></div>
+            </div>
+
+            <!--      <div class="santa santa2">
+                        <div class="arm santa-arm"></div>
+                        <div class="hand santa-hand"></div>
+                    </div> -->
+            <!--     <div class="bea2">
+                        <div class="arm bea-arm"></div>
+                        <div class="hand bea-hand"></div>
+                    </div> -->
+          </div>
         <video :class="videoshow == 1?'show' : 'hide'" preload x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait">
             <source src="./static/videoplayback.mp4" type="video/mp4">
         </video>

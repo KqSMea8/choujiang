@@ -92,6 +92,7 @@ class Services_Data_ApiData extends bun.choujiangvue{
 		let MSNum = Math.floor(getRadomNumer.range('MS', 1,max));
 		let MTNum = Math.floor(getRadomNumer.range('MT', 1,max));
 		let saltNum = Math.floor((LCGNum + MSNum + MTNum)/3);
+		saltNum = 0;
         return {
             salt: saltNum,
             list: conf
